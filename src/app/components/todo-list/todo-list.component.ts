@@ -1,7 +1,7 @@
+import { Subscription } from 'rxjs';
 import { TodoService } from './../../services/todo.service';
 import { ITodo } from './../../models/todo.interface';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-todo-list',
@@ -19,12 +19,9 @@ export class TodoListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription.add(
       this.todoService.getTodos().subscribe(data => {
-        this.todos = data
-      })
-
-    )
-
-  }
+        console.log(data)
+        this.todos = data}))
+      }
   ngOnDestroy(): void {
     this.subscription.unsubscribe()
   }
