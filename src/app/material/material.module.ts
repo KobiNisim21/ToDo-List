@@ -5,15 +5,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const modules = [
   MatToolbarModule,
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatDividerModule
-
-]
+  MatDividerModule,
+  MatDialogModule
+];
 
 @NgModule({
   declarations: [],

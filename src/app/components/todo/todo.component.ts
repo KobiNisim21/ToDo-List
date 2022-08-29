@@ -27,4 +27,13 @@ export class TodoComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  public onCompleteTodo(todo: ITodo): void {
+    todo.isCompleted = true;
+  }
+
+
+  public onArchiveTodo(): void {
+    this.todo.isArchived = true;
+  }
+
 }

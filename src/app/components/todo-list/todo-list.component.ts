@@ -19,11 +19,25 @@ export class TodoListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription.add(
       this.todoService.getTodos().subscribe(data => {
-        console.log(data)
-        this.todos = data}))
-      }
+        console.log(data);
+        this.todos = data;
+      })
+    );
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe()
   }
+
+  public onTodoClick(todo: ITodo, index: number): void {
+    this.todoService.setSelectedTodo(todo);
+    this.todos.forEach(todo => {
+      if(todo.selected) {
+        todo.selected = false; //change background color by click >> for each item.
+      }
+    })
+    this.todos[index].selected = true;
+  }
+
 }
 

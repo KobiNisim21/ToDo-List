@@ -9,13 +9,15 @@ import {MatCardModule} from '@angular/material/card';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { NewTodoComponent } from './components/new-todo/new-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     HeaderComponent,
-    TodoComponent
+    TodoComponent,
+    NewTodoComponent
   ],
   imports: [
     BrowserModule,
