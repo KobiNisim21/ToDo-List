@@ -13,8 +13,6 @@ import { NewTodoComponent } from './components/new-todo/new-todo.component';
 import { TodoContainerComponent } from './todo-container/todo-container.component';
 import { CountDownComponent } from './components/count-down/count-down.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
