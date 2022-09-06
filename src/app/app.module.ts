@@ -1,7 +1,7 @@
 import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +21,7 @@ import { CountDownComponent } from './components/count-down/count-down.component
     TodoComponent,
     NewTodoComponent,
     TodoContainerComponent,
-    CountDownComponent
+    CountDownComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +29,7 @@ import { CountDownComponent } from './components/count-down/count-down.component
     BrowserAnimationsModule,
     MaterialModule,
     MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

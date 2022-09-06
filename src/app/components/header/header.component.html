@@ -1,7 +1,17 @@
 <mat-toolbar>
   <span>NG Todo</span>
   <span class="spacer"></span>
-  <button mat-icon-button class="icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
+     <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>archive</mat-icon>
+        <span>Archive</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable Notifications</span>
+      </button>
+    </mat-menu>
   </button>
 </mat-toolbar>
